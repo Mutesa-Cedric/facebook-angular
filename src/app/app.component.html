@@ -1,22 +1,30 @@
-
-<style>
-  .main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-size:30px;
-    font-weight: 900;
-  }
-
-</style>
+<style></style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <div class="main text-red-500">
-    Hello  {{title}} 
-  </div>
-</div>
 
+<div class="w-full h-screen bg-blue-darkest overflow-hidden relative">
+  <!-- nav-bar -->
+  <app-navbar></app-navbar>
+
+  <!-- main -->
+  <main class="flex justify-between items-center p-6 mt-20">
+    <!-- menubar -->
+    <app-menu></app-menu>
+
+    <!-- middle section -->
+    <section class="flex flex-col space-y-5 relative w-[62vw] h-[87vh] overflow-auto no-scrollbar">
+      <!-- stories section -->
+      <app-stories></app-stories>
+
+      <!-- new post section -->
+      <app-create-post></app-create-post>
+
+      <!-- feed -->
+      <app-feed></app-feed>
+    </section>
+
+    <!-- notifications and active friends -->
+    <app-notifications-bar></app-notifications-bar>
+  </main>
+</div>
 <router-outlet></router-outlet>

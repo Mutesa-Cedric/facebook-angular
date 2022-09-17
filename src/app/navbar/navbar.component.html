@@ -1,1 +1,33 @@
-<p>navbar works!</p>
+<nav class="flex items-center justify-between bg-blue-dark py-5 px-7 fixed top-0 left-0 w-full z-50">
+  <!-- logo -->
+  <div class="text-blue-light text-2xl font-bold">
+    <p>Facebook</p>
+  </div>
+
+  <!-- search -->
+  <div class="bg-inherit">
+    <input
+      type="text"
+      placeholder="Search facebook"
+      class="bg-blue-darkest py-2.5 px-12 text-white text-md placeholder:text-white placeholder:text-sm rounded-[50px] outline-none"
+    />
+  </div>
+
+  <!-- icons and profile -->
+  <div class="flex items-center space-x-4">
+      <div class="space-x-4 flex items-center">
+        <div *ngFor="let button of navbarButtons">
+            <div class="h-9 w-9 rounded-full bg-blue-darkest flex items-center relative justify-center cursor-pointer" :key="button.id">
+                <img [src]="button.svgUrl"/>
+                <div *ngIf="button.hasActiveIcon" class="absolute top-2 right-2 h-2 w-2 rounded-full bg-[#EF0C35]"></div>
+            </div>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <img src="assets/images/profile.png" alt="profile" srcset="" class="h-7 w-7 rounded-full"/>
+        <svg class="cursor-pointer" width="12" height="6" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.5304 0H0.469584C0.0778387 0 -0.140902 0.441535 0.101701 0.742968L6.63212 8.82646C6.81904 9.05785 7.17897 9.05785 7.36788 8.82646L13.8983 0.742968C14.1409 0.441535 13.9222 0 13.5304 0Z" fill="#0C88EF"/>
+        </svg>          
+      </div>
+  </div>
+</nav>

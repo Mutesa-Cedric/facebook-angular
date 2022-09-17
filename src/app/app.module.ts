@@ -10,6 +10,9 @@ import { NotificationsBarComponent } from './notifications-bar/notifications-bar
 import { StoryComponent } from './story/story.component';
 import { NotificationComponent } from './notification/notification.component';
 import { FriendRequestComponent } from './friend-request/friend-request.component';
+import { FeedComponent } from './feed/feed.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { StoriesComponent } from './stories/stories.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { FriendRequestComponent } from './friend-request/friend-request.componen
     NotificationsBarComponent,
     StoryComponent,
     NotificationComponent,
-    FriendRequestComponent
+    FriendRequestComponent,
+    FeedComponent,
+    CreatePostComponent,
+    StoriesComponent
   ],
   imports: [
     BrowserModule,
