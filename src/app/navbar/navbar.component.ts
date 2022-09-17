@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarButton, navbarButtons } from './navbarButtonClass';
+import { NavbarButton, navbarButtons } from '../../models/navbarButtonModel';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +9,7 @@ import { NavbarButton, navbarButtons } from './navbarButtonClass';
 export class NavbarComponent implements OnInit {
   navbarButtons: NavbarButton[] = navbarButtons;
   constructor() {
-    
+
   }
 
   ngOnInit(): void {

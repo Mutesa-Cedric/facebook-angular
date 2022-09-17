@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FriendRequest, friendRequests } from 'src/models/friendRequestModel';
+import { MenuLink, menuLinks } from '../../models/MenuLinksModel';
 
 @Component({
   selector: 'app-menu',
@@ -6,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
+  menuLinks:MenuLink[]=menuLinks;
+  friendRequests:FriendRequest[]=friendRequests;
   constructor() {
     
    }
