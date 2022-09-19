@@ -1,4 +1,4 @@
-<section class="flex items-center justify-between space-x-5 relative">
+<section class="flex items-center justify-between space-x-5 w-full">
   <!-- add story button -->
   <div class="rounded-md w-44 h-48 bg-blue-dark flex items-center justify-center">
     <div class="h-8 w-8 bg-blue-light rounded-md cursor-pointer flex items-center justify-center">
@@ -8,7 +8,7 @@
   <!-- stories -->
   <app-story *ngFor="let story of currentStories" [story]="story"></app-story>
 
-  <div class="absolute bg-blue-darkest shadow-xl h-8 -right-4   flex items-center justify-center w-8 rounded-full">
+  <div class="absolute bg-blue-darkest shadow-xl h-8 -right-0   flex items-center justify-center w-8 rounded-full">
     <img src="assets/icons/arrow_right.svg"/>
   </div>
 </section>

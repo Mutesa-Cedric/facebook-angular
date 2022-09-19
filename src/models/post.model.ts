@@ -44,7 +44,10 @@ export const posts:Post[]=[
         },
         postedAt:new Date(),
         media:{
-            images:["assets/images/posts/post1.png"],
+            images:[
+                "assets/images/dog_img.png",
+                "assets/images/chipanze_img.png",
+            ],
             reactions:{
                 likes:10,
                 love:5,
@@ -79,7 +82,7 @@ export const posts:Post[]=[
         },
         postedAt:new Date(),
         media:{
-            images:["assets/images/posts/post2.png"],
+            images:["assets/images/posts/post1.png"],
             reactions:{
                 likes:10,
                 love:5,
@@ -113,7 +116,7 @@ export const posts:Post[]=[
         },
         postedAt:new Date(),
         media:{
-            images:["assets/images/posts/post3.png"],
+            images:["assets/images/posts/post1.png"],
             reactions:{
                 likes:10,
                 love:5,
@@ -147,7 +150,7 @@ export const posts:Post[]=[
         },
         postedAt:new Date(),
         media:{
-            images:["assets/images/posts/post4.png"],
+            images:["assets/images/posts/post1.png"],
             reactions:{
                 likes:10,
                 love:5,
