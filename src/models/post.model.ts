@@ -11,7 +11,7 @@ export type Comment={
 }
 
 export type Media = {
-    images?: [string];
+    images?: string[];
     video?: string;
     reactions?: {
         likes?: number;
@@ -70,6 +70,7 @@ export const posts:Post[]=[
                 shares:2
             }
         },
+        text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque.'
     },
     {
         postedBy:{

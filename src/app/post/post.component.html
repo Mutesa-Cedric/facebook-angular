@@ -1,3 +1,47 @@
-<div class="w-full h-[70vh] rounded-md bg-blue-dark">
-
+<div
+  class="w-full rounded-md h-[70vh] bg-blue-dark flex flex-col space-y-3 p-5"
+>
+  <div class="flex items-center space-x-2">
+    <img [src]="post.postedBy.profileImg" class="rounded-full" />
+    <div class="flex flex-col">
+      <p class="text-white text-sm">{{ post.postedBy.name }}</p>
+      <p class="text-white-primary text-xs">{{ post.postedAt }}</p>
+    </div>
+  </div>
+  <div *ngIf="post.text" class="text-white">
+    {{ post.text }}
+  </div>
+  <div *ngIf="post.media">
+    <div *ngIf="post.media.images?.length === 1" class="flex justify-center">
+      <img [src]="post.media!.images![0]" class="rounded-md" />
+    </div>
+    <div *ngIf="post.media!.images!.length > 1" class="flex justify-center">
+      <img [src]="post.media!.images![0]" class="rounded-md" />
+      <img [src]="post.media!.images![1]" class="rounded-md" />
+    </div>
+  </div>
+  <div class="flex flex-col space-y-2">
+    <div *ngIf="post?.media?.reactions">
+      <div *ngIf="post?.media?.reactions?.likes" class="flex items-center p-2 space-x-2 rounded-sm bg-blue-darkest">
+        <img src="assets/icons/like_icon.svg" />
+        <p class="text-white font-semibold text-sm">
+          {{ post.media?.reactions?.likes }}
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center justify-between px-12 text-white">
+        <div class="reaction-button">
+            <img src="assets/icons/like_icon_white.svg" class="w-5 h-5"/>
+            <p class="text-white-primary text-sm ml-1">Like</p>
+        </div>
+        <div class="reaction-button">
+            <img src="assets/icons/comment_icon.svg" class="w-5 h-5 ml-4"/>
+            <p class="text-white-primary text-sm ml-1">Comment</p>
+        </div>
+        <div class="reaction-button">
+            <img src="assets/icons/share_icon.svg" class="w-5 h-5 ml-4"/>
+            <p class="text-white-primary text-sm ml-1">Share</p>
+        </div>
+    </div>
+  </div>
 </div>

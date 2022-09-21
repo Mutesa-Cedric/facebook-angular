@@ -6,10 +6,7 @@
     </div>
   </div>
   <!-- stories -->
-  <app-story></app-story>
-  <app-story></app-story>
-  <app-story></app-story>
-  <app-story></app-story>
+  <app-story *ngFor="let story of currentStories" [story]="story"></app-story>
 
   <div class="absolute bg-blue-darkest shadow-xl h-8 -right-4   flex items-center justify-center w-8 rounded-full">
     <img src="assets/icons/arrow_right.svg"/>
